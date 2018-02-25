@@ -1,0 +1,26 @@
+
+
+<h1>Fudo</h1>
+  <div>
+    <% @allItems.each do |item| %>
+        <div>
+         
+          <div>
+            <img src="<%= item.image %>" alt="Card image cap" style="
+        max-width: 60%;
+        max-height: 60%;
+        min-height: 60%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title"><%= item.title %></h4>
+            <p class="card-text">
+              <%= item.description %>
+            </p>
+          </div>
+        </div>
+        <% end %>
+      </div>

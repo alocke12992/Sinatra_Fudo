@@ -1,0 +1,41 @@
+body { 
+  background-color: #0051ba;
+  color: white;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home {
+  margin-top: 100px;
+}
+
+
+.sign {
+  background-color: white;
+  color: #0051ba;
+  border-radius: 10px 0 10px 0;
+  padding: 10px 25px;
+  width: 75px; 
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.signn {
+  background-color: white;
+  color: #0051ba;
+  border-radius: 10px 0 10px 0;
+  padding: 5px 10px;
+  width: 45px;
+  display: inline-block;
+  margin: 5px;
+  font-size: 10px;
+  text-decoration: none;
+  text-align: center;
+}

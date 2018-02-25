@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="
+  <% if session[:id] == nil %>
+  /users/home
+  <% else %>
+  /users/profile
+  <% end %>"><img src="/Fudo_logow.png" width='50px'></a>
+  <div class='nav'>
+        <a class="signn" href="/users/home">Feed</a>
+      
+      <% if session[:id] != nil %>
+        
+          <a class="signn" href="/users/items/new">New post</a>
+      
+      
+          <a class="signn" href="/sessions/logout">Sign Out</a>
+ 
+        <% else %>
+        
+            <a class="signn" href="/sessions/login">Sign In</a>
+      
+          <% end %>
+    
+  </div>
+</nav>
