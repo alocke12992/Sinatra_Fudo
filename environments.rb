@@ -1,10 +1,10 @@
 configure :development do
-  set :database, 'sqlite3:fudo.db'
+  set :database, 'sqlite3:resturant.db'
   set :show_exceptions, true
 end
 
 configure :production do
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///localhost/fudo')
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///localhost/resturant')
 
   ActiveRecord::Base.establish_connection(
     :adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
@@ -14,4 +14,4 @@ configure :production do
     :database => db.path[1..-1],
     :encoding => 'utf8'
   )
-end 
+end

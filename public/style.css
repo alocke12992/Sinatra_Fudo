@@ -1,10 +1,6 @@
-
-
 /* CSS RESET ^ */
 
-
-
-body { 
+body {
   background-image: linear-gradient(to top, #005bea 0%, #00c6fb 100%);
   height: 800px;
   color: white;
@@ -29,19 +25,17 @@ form {
   margin-top: 200px;
 }
 
-
 .sign {
   background-color: white;
   color: #0051ba;
   border-radius: 10px 0 10px 0;
   padding: 10px 25px;
-  width: 75px; 
+  width: 75px;
   display: inline-block;
   margin: 10px;
   margin-top: 30px;
   text-decoration: none;
   text-align: center;
-
 }
 
 .signn {

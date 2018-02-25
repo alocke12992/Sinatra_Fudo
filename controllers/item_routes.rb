@@ -1,44 +1,43 @@
-
 class Items < Sinatra::Base
 
-  get "/users/profile/new" do
+  get "/users/items/new" do
     erb :'/users/new'
   end
 
-  get "/users/profile/:id/edit" do
+  get "/users/items/:id/edit" do
     @item = Item.find(params[:id])
     erb :'/users/edit'
   end
 
-  put "/users/profile/:id" do
+  put "/users/items/:id" do
     item = Item.find(params[:id])
     item.update({title: params[:title], description: params[:description], image: params[:image]})
-    redirect "/users/profile"
+    redirect "/users/items"
   end
 
-  get "/users/profile" do
+  get "/users/items" do
     @items = Item.where(:id => session[:id]).all
-    erb :'/users/profile'
+    erb :'/users/items'
   end
 
   get "/users/home" do
+   
     @allItems = Item.all
     erb :'/users/home'
   end
 
-  post "/users/profile" do
+  post "/users/items" do
     Item.create(
       id: session[:id],
       title: params[:title],
       description: params[:description],
       image: params[:image]
     )
-    redirect "/users/profile"
+    redirect "/users/items"
   end
-
-  delete '/users/profile/:id' do |id|
+  delete '/users/items/:id' do |id|
     Item.find(params[:id]).destroy
-    redirect "/users/profile"
+    redirect "/users/items"
   end
 
 end

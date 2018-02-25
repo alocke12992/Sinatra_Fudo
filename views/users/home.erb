@@ -1,19 +1,19 @@
-
-<%= erb :navbar %>
-<h1>Fudo</h1>
-  <div>
+<h1>  </h1>
+  <div class="card">
     <% @allItems.each do |item| %>
-        <div>
-    
-          <div>
-            <img src="<%= item.image %>" alt="Card image cap">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title"><%= item.title %></h4>
-            <p class="card-text">
-              <%= item.description %>
-            </p>
-          </div>
-        </div>
-        <% end %>
+    <div class="col-sm-" style="margin-top: 1%;">
+      <div class="card ol d-flex">
+        <div class="card-body">
+        <img class="card-img-top" src="<%= item.image %>" alt="Card image cap">
       </div>
+      <div class="card-body">
+        <h4 class="card-title">
+          <%= item.title %>
+        </h4>
+        <p class="card-text" style="font-size: 12px;">
+          <%= item.description %>
+        </p>
+      </div>
+    </div>
+    <% end %>
+  </div>

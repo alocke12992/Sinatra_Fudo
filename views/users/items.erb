@@ -1,0 +1,23 @@
+
+<div>
+<% @items.each do |item| %>
+<div >
+  <div class="card ol d-flex custom" >
+    <div >
+    <img class="card-img-top" src="<%= item.image %>" alt="Card image cap">
+    <h4 class="card-title">
+      <%= item.title %>
+    </h4>
+    <p class="card-text">
+      <%= item.description %>
+    </p>
+  </div>
+  <a  href="/users/items/<%= item.id %>/edit" >Edit</a>
+    <form action="/users/items/<%= item.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE" />
+      <button >Delete</button>
+    </form>
+  </div>
+</div>
+<% end %>
+</div>
