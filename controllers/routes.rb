@@ -1,6 +1,5 @@
 require_relative 'item_routes'
 
-
 class Feed < Sinatra::Base
   
   get '/' do
@@ -46,9 +45,6 @@ class Feed < Sinatra::Base
     @user = User.find(session[:id])
     erb :'/users/home'
   end
-
-
-end
-
-
+end 
+ 
 

@@ -1,3 +1,4 @@
+
 class Items < Sinatra::Base
 
   get "/users/profile/new" do
@@ -34,6 +35,7 @@ class Items < Sinatra::Base
     )
     redirect "/users/profile"
   end
+
   delete '/users/profile/:id' do |id|
     Item.find(params[:id]).destroy
     redirect "/users/profile"
